@@ -3,7 +3,7 @@
 //  tjk
 //
 //  Created by 张旭东 on 14-4-3.
-//  Copyright (c) 2014年 taig. All rights reserved.
+//  Copyright (c) 2014年 张旭东. All rights reserved.
 //
 
 #import "CheckedTableViewCell.h"
@@ -16,7 +16,7 @@
     // Configure the view for the selected state
 }
 
-- (void) setCheckImageViewCenter:(CGPoint)pt alpha:(CGFloat)alpha animated:(BOOL)animated{
+- (void)setCheckImageViewCenter:(CGPoint)pt alpha:(CGFloat)alpha animated:(BOOL)animated{
 	if (animated){
         [UIView animateWithDuration:0.3 animations:^{
             _checkImageView.center = pt;

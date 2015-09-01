@@ -3,7 +3,7 @@
 
 ### **废话不多**，先看效果
 
-![image description](https://github.com/hytzxd/multipleChoiceTableViewCell/blob/master/SelectedTableCell/selected1.gif)
+![image description](https://github.com/hytzxd/multipleChoiceTableViewCell/blob/master/selected1.gif)
 
 
 ### **说下实现**
