@@ -86,9 +86,9 @@ UITableViewDelegate
     [cell  setChecked:YES];
 }
 
-- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 60.f;
 }
 
 - (void)didReceiveMemoryWarning {
