@@ -39,6 +39,7 @@ UITableViewDelegate
 
 - (void)changeTableEdit{
     [self.tableView setEditing:!self.tableView.editing animated:YES];
+    [self.selectedSet removeAllObjects];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -50,7 +51,7 @@ UITableViewDelegate
     CheckedTableViewCell *cell = (CheckedTableViewCell *)[tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[CheckedTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 40, 60)];
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 10, 40, 40)];
         [view setBackgroundColor:[UIColor yellowColor]];
         [cell.contentView addSubview:view];
     }
@@ -65,7 +66,7 @@ UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-
+    if (!tableView.editing)return;
     CheckedTableViewCell *cell = (CheckedTableViewCell *)[tableView cellForRowAtIndexPath:indexPath];
     if ([self.selectedSet containsObject:indexPath]) {
         [self.selectedSet removeObject:indexPath];
