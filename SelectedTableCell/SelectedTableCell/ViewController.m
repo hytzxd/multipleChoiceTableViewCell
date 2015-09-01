@@ -13,8 +13,8 @@
 UITableViewDataSource,
 UITableViewDelegate
 >
-@property (strong ,nonatomic)UITableView *tableView;
-@property (strong ,nonatomic)NSMutableSet *selectedSet;
+@property (nonatomic ,strong)UITableView *tableView;
+@property (nonatomic ,strong)NSMutableSet *selectedSet;
 @end
 
 @implementation ViewController

@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CheckedTableViewCell : UITableViewCell
-@property (strong ,nonatomic)UIImageView *checkImageView;
-@property (assign ,nonatomic)BOOL checked;
+@property (nonatomic ,strong)UIImageView *checkImageView;
+@property (nonatomic ,assign)BOOL checked;
 @end
