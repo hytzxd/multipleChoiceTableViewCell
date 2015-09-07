@@ -1,4 +1,7 @@
 # multipleChoiceTableViewCell
+tableview 设置了editing 和 allowsMultipleSelectionDuringEditing = YES
+以后会有多选的效果。但是这种效果的圆圈图片是系统的。我们不能改动。所以这里我使用了另一种方法来支持改选择标记。
+
 多选tableViewCell
 
 ### **废话不多**，先看效果

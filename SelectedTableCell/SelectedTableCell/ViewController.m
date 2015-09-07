@@ -15,6 +15,7 @@ UITableViewDelegate
 >
 @property (nonatomic ,strong)UITableView *tableView;
 @property (nonatomic ,strong)NSMutableSet *selectedSet;
+
 @end
 
 @implementation ViewController
@@ -31,16 +32,16 @@ UITableViewDelegate
     self.tableView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[_tableView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_tableView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-70-[_tableView]-0-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_tableView)]];
-    
+//    self.tableView.allowsMultipleSelectionDuringEditing = YES;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 20, 60, 40);
     [btn setBackgroundColor:[UIColor yellowColor]];
-    
     [btn addTarget:self action:@selector(changeTableEdit) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     btn.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[btn(==60)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(btn)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-20-[btn(==40)]" options:0 metrics:nil views:NSDictionaryOfVariableBindings(btn)]];
+    
     self.selectedSet = [[NSMutableSet alloc]initWithCapacity:42];
     
 }
